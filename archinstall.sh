@@ -15,11 +15,11 @@ fi
 echo """
 {
 	\"!root-password\":\"${ROOT_PWD}\",
-	\"!users\": {
+	\"!users\": [{
 		\"username\": \"${USERNAME}\",
 		\"!password\": \"${USER_PWD}\",
 		\"sudo\": true
-	}
+	}]
 }
 """ > creds.json
 
