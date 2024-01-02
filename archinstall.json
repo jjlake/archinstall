@@ -19,7 +19,7 @@
 		"go", "rust",
 		"boost", "boost-libs", "clang", "cmake", "gcc", "make", 
 		"go", "nodejs", "npm", "rust",
-		"mono", "jdk-openjdk", "npm"
+		"mono", "jdk-openjdk", "npm",
 		"wofi", "swaylock",
 		"bluez", "blueman", 
 		"blender", "gimp", "godot", "imagemagick",
