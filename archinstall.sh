@@ -4,7 +4,7 @@ read -s ROOT_PWD
 echo "Confirm root user password"
 read -s CHECK_ROOTPWD
 
-if [[ $ROOT_PWD != $CHECK_ROOTPWD ] ]]; then
+if [[ $ROOT_PWD != $CHECK_ROOTPWD ]]; then
 	echo "Root passwords do not match."
 	exit 0
 fi
