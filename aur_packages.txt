@@ -1,0 +1,9 @@
+python-pip
+swaybg
+drawio-desktop-bin
+swaylock-effects
+lsix
+wev-git
+gotty-bin
+nb
+signal-bin
