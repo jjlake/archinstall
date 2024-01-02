@@ -33,12 +33,13 @@ cd /home/${USERNAME}
 sudo -u ${USERNAME} git clone https://aur.archlinux.org/yay.git
 cd yay
 sudo -u ${USERNAME} makepkg -si
-yay -Sy aur_packages.txt
 cd ..
-mkdir ohmyzsh
-curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-cd ohmyzsh
-sh install.sh
+rm -R yay
+git clone https://github.com/jjlake/archinstall.git
+yay -Sy --noconfirm - < archinstall/aur_packages.txt
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh > install.sh
+sudo -u jye sh install.sh
+rm install.sh
 "
 
 if [[ $GH_USERNAME != "" ]]; then
