@@ -43,6 +43,6 @@ sh install.sh
 
 if [[ $GH_USERNAME != "" ]]; then
 	arch-chroot /mnt/archinstall bash -c "
-	su -u ${USERNAME} chezmoi init --apply --verbose https://github.com/${GH_USERNAME}/dotfiles.git
+	sudo -u ${USERNAME} chezmoi init --apply --verbose https://github.com/${GH_USERNAME}/dotfiles.git
 	"
 fi
