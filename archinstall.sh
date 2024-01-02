@@ -1,13 +1,22 @@
 #!/bin/bash
 echo "Enter your desired root user password"
-read -s ROOTPWD
+read -s ROOT_PWD
+echo "Confirm root user password"
+read -s CHECK_ROOTPWD
+
+if [[ $ROOT_PWD != $CHECK_ROOTPWD ] ]]; then
+	echo "Root passwords do not match."
+	exit 0
+fi
+
 echo "Enter your desired username"
 read USERNAME
+
 echo "Enter your desired user password"
 read -s USER_PWD
 echo "Confirm password"
 read -s CHECK_PWD
-if [[ $password != $password_check ]]; then
+if [[ $USER_PWD != $CHECK_PWD ]]; then
 	echo "Passwords do not match."
 	exit 0
 fi
@@ -22,6 +31,8 @@ echo """
 	}]
 }
 """ > creds.json
+
+sudo pacman -Sy archlinux-keyring --noconfirm
 
 archinstall --config archinstall.json --creds creds.json
 
