@@ -34,11 +34,14 @@ sudo -u ${USERNAME} git clone https://aur.archlinux.org/yay.git
 cd yay
 sudo -u ${USERNAME} makepkg -si
 yay -Sy aur_packages.txt
+cd ..
+mkdir ohmyzsh
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+cd ohmyzsh
 sh install.sh
 "
 
-if [[ $GH_USERNAME == "" ]]; then
+if [[ $GH_USERNAME != "" ]]; then
 	arch-chroot /mnt/archinstall bash -c "
 	su -u ${USERNAME} chezmoi init --apply --verbose https://github.com/${GH_USERNAME}/dotfiles.git
 	"
