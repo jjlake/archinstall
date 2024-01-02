@@ -18,8 +18,8 @@ echo """
 	\"!users\": {
 		\"username\": \"${USERNAME}\",
 		\"!password\": \"${USER_PWD}\",
-		\"sudo\": true,
-	},
+		\"sudo\": true
+	}
 }
 """ > creds.json
 
