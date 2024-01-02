@@ -1,0 +1,55 @@
+{
+    "audio_config": {"audio": "pipewire"},
+    "bootloader": "grub",
+    "filesystem": "ext4",
+    "swap": true,
+    "kernels": [
+        "linux"
+    ],
+    "keyboard-language": "us",
+    "nic": {
+        "NetworkManager": true,
+        "nic": "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE)"
+    },
+    "ntp": true,
+    "packages": [
+		"base-devel", "git", "neovim", "docker",
+		"firefox","libreoffice-fresh",
+		"wget", "zsh", "man-db", "curl", "ffmpeg",
+		"go", "rust",
+		"boost", "boost-libs", "clang", "cmake", "gcc", "make", 
+		"go", "nodejs", "npm", "rust",
+		"mono", "jdk-openjdk", "npm"
+		"wofi", "swaylock",
+		"bluez", "blueman", 
+		"blender", "gimp", "godot", "imagemagick",
+		"mixxx", "vlc", 
+		"gparted", "ntfs-3g",
+		"nsxiv", "imagemagick",
+		"handbrake", "mpv",
+		"xarchiver", "p7zip", "unrar", "xz",
+		"inetutils",
+		"nemo", "ranger",
+		"ttf-font-awesome", 
+		"pamixer", "mixxx",
+		"udiskie",
+		"hicolor-icon-theme", "papirus-icon-theme",
+		"ttf-font-awesome", "otf-font-awesome", "ttf-terminus-nerd",
+		"duf", "glances", "radeontop", "btop",
+		"syncthing",
+		"ly", "chezmoi"
+	],
+		 "profile_config": {
+        "gfx_driver": "AMD / ATI (open-source)",
+        "profile": {
+            "details": [
+                "Sway"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "services": ["bluetooth", "docker", "ly"],
+    "sys-encoding": "utf-8",
+    "sys-language": "en_AU",
+    "timezone": "Australia/Melbourne"
+}
