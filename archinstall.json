@@ -8,7 +8,7 @@
     ],
     "keyboard-language": "us",
     "nic": {
-        "NetworkManager": true,
+        "NetworkManager": true
     },
     "ntp": true,
     "packages": [
