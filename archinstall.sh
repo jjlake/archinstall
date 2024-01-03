@@ -46,11 +46,12 @@ cd yay
 sudo -u ${USERNAME} makepkg -si
 cd ..
 rm -R yay
-git clone https://github.com/jjlake/archinstall.git
+git clone https://github.com/${GH_USERNAME}/archinstall.git
 yay -Sy --noconfirm - < archinstall/aur_packages.txt
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh > install.sh
-sudo -u jye sh install.sh
+sudo -u ${USERNAME} sh install.sh
 rm install.sh
+sudo -u ${USERNAME} git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 "
 
 if [[ $GH_USERNAME != "" ]]; then
